@@ -3,6 +3,7 @@ package vetores;
 public class Vet2 {
 	private float x, y;
 
+	//Construtores
 	public Vet2() {
 		this.x = 0;
 		this.y = 0;
@@ -13,7 +14,7 @@ public class Vet2 {
 		this.y = y;
 	}
 	
-	
+	//Getters e Setters
 	public float getX() {
 		return x;
 	}
@@ -30,7 +31,7 @@ public class Vet2 {
 		this.y = y;
 	}
 
-	
+	//Metodos
 	public float tamanhoVetor() {
 		float tamanho =0;
 		
@@ -40,8 +41,7 @@ public class Vet2 {
 	}
 	
 	public void normalizaVetor() {
-		float tamanho =0;
-		tamanho = (float) Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+		float tamanho = tamanhoVetor();
 		
 		this.x = x/tamanho;
 		this.y = y/tamanho;
@@ -52,6 +52,11 @@ public class Vet2 {
 		this.y = y + vet.getY();
 	}
 	
+	public void subtracaoVetores(Vet2 vet) {
+		this.x = x - vet.getX();
+		this.y = y - vet.getY();
+	}
+
 	public void multiplicacaoEscalar(float n) {
 		this.x = x*n;
 		this.y = y*n;

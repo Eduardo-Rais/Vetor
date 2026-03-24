@@ -66,6 +66,12 @@ public class Vet3 {
 		this.z = z + vet.getZ();
 	}
 
+	public void subtracaoVetores(Vet3 vet) {
+		this.x = x - vet.getX();
+		this.y = y - vet.getY();
+		this.z = z - vet.getZ();
+	}
+
 	public void multiplicacaoEscalar(float n) {
 		this.x = x*n;
 		this.y = y*n;
